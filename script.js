@@ -10,7 +10,6 @@ var numeric = [0,1,2,3,4,5,6,7,8,9];
 var specialCharacters = [" ", "!", "\"", "#", "$", "%", "&", "\'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
 
 
-var combineall = [];
 // lowercase.concat(uppercase,numeric,specialCharacters);
 // console.log (combineall);
 
@@ -29,44 +28,49 @@ function generatePassword() {
   if (inputLength < 8 || inputLength > 128) {
     window.alert("The number of characters cannot be less than 8 and no more than 128, please enter it again.");
   } else {
+    var combineall = [];
+
     // 3- prompt question: to include special characters
     var includeSpecialCharacters = window.confirm("Click OK to confirm including special characters.");
-    
+    if (includeSpecialCharacters) { 
+      combineall = specialCharacters;
+    }
+
     // 4- prompt question: to include numeric characters
     var includeNumeric = window.confirm("Click OK to confirm including numeric characters.");
+    if (includeNumeric) {
+      combineall = combineall.concat(numeric);
+    }
 
     // 5- prompt question: to include uppercase characters
     var includeUppercase = window.confirm("Click OK to confirm including uppercase characters.");
+    if (includeUppercase) {
+      combineall = combineall.concat(uppercase);
+    }
 
     // 6- prompt question: to include lowercase characters
     var includeLowercase = window.confirm("Click OK to confirm including lowercase characters.");
+    if (includeLowercase) {
+      combineall = combineall.concat(lowercase);
+    }
 
+    // console.log (combineall);
+
+    if (!includeSpecialCharacters && !includeNumeric && !includeUppercase && !includeLowercase) {
+      window.alert("At least one of the character types should be selected, please enter it again.");
+    } else {
+      var generatedPassword = "";
+       // 7- generate password
+       for (var i = 0; i < inputLength; i++) {
+        generatedPassword = generatedPassword + combineall [Math.floor(Math.random() * combineall.length)];
+       }
+
+       password = generatedPassword;
+    }
 
   }
 
-
-
-  // 7- generate password
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
