@@ -2,18 +2,11 @@
 var generateBtn = document.querySelector("#generate");
 
 
-// Declares variables for password length, lowercase, uppercase, numeric, special characters
-// var length - from prompt
+// 0- Declares variables for lowercase, uppercase, numeric, and special characters
 var lowercase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 var uppercase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 var numeric = [0,1,2,3,4,5,6,7,8,9];
 var specialCharacters = [" ", "!", "\"", "#", "$", "%", "&", "\'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
-
-
-// lowercase.concat(uppercase,numeric,specialCharacters);
-// console.log (combineall);
-
-
 
 
 
@@ -24,7 +17,7 @@ function generatePassword() {
   // 1- prompt for password length
   var inputLength = window.prompt("How many characters would you like your password to contain?");
 
-  // 2- check if inputLength is valid, if not valid then stop. If valid continue.
+  // 2- check if inputLength is valid, if not valid then stop. If valid then continue.
   if (inputLength < 8 || inputLength > 128) {
     window.alert("The number of characters cannot be less than 8 and no more than 128, please enter it again.");
   } else {
@@ -56,11 +49,12 @@ function generatePassword() {
 
     // console.log (combineall);
 
+    // 7- prevent user from choosing no character types
     if (!includeSpecialCharacters && !includeNumeric && !includeUppercase && !includeLowercase) {
-      window.alert("At least one of the character types should be selected, please enter it again.");
+      window.alert("At least one of the character types should be selected, please try again.");
     } else {
       var generatedPassword = "";
-       // 7- generate password
+       // 8- generate password
        for (var i = 0; i < inputLength; i++) {
         generatedPassword = generatedPassword + combineall [Math.floor(Math.random() * combineall.length)];
        }
@@ -69,10 +63,6 @@ function generatePassword() {
     }
 
   }
-
- 
-
-
 
   return password;
 }
@@ -90,26 +80,3 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 
-
-
-// 2) generate pw all "a"'s for the desired length
-// "aaaaaaa"
-// password = "";
-
-// for (var i=0; i < inputlength; i++) {
-// password = password + "a"
-
-// }
-
-// 3) display all random lowercase letters for the chose length
-
-// var lowercase = window.confirm("Click OK to confirm including lowercase characters.");
-
-// 4) display all random uppercase/lowercase letters
-// 5) let user choose to include uppercase and/or lowercase
-// 6) let user choose upper, lower, and/or numbers
-// 7) let user choose upper, lower, numbers, and/or specials
-// 8) prevent user from too short
-// 9) prevent user from too short or too long
-
-// 10) prevent user from choosing no character types
