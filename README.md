@@ -20,7 +20,7 @@ Welcome to the Password Generator application page!
 
 This is a webpage to help generating a random password based on criterias that the user selects. In this page, you will see some pop-ups windows regarding 4 different character types (lowercase, uppercase, numeric, and special characters). User will need to confirm whether to include them in the password. User will also be asking how many characters the password should contain.
 
-The main purpose of this project is to practise my skills in For Loop, generating random characters, the use of variables, arrays, and functions in JavaScript.
+The main purpose of this project is to practise my skills in for loop, generating random strings, the use of variables, arrays, and functions in JavaScript.
 
 
 ## Usage
