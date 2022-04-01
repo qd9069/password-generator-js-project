@@ -1,8 +1,8 @@
 # Password Generator - JavaScript Project
 
-## Link
-Please click the following link to find the deployed project:
+## Link 
 
+### Please click [here](https://qd9069.github.io/password-generator-js-project/) to find the deployed project.
 
 ## Table of Contents
 
