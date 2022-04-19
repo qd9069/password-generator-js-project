@@ -11,6 +11,7 @@
 - [Usage](#usage)
 - [Technology](#technology)
 - [Assets](#assets)
+- [License](#license)
 - [Credits](#credits)
 
 
@@ -46,6 +47,8 @@ The following images demonstrate the web application's appearance and functional
 ![image for password generator with prompt window](assets/images/password-generator-window.png)
 ![image for password generator with password](assets/images/password-generator-result.png)
 
+## License
+Copyright (c) 2022 Elaine D. Released under the MIT [License](./LICENSE).
 
 ---
 ## Credits
